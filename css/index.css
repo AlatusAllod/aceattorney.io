@@ -36,6 +36,8 @@ i {
 	flex-direction: column;
 	height: 960px;
 	background-image: url(../img/page-header-background.jpg);
+	background-size: cover;
+    background-position: 75% 100%;
 	color: white;
 }
 
@@ -68,6 +70,9 @@ i {
 }
 
 .header-menu .callback {
+	display: block;
+	white-space: normal;
+	text-align: center;
 	border: 1px solid #ceb475;
 	border-radius: 4px;
 	padding: 10px 19px;
@@ -463,7 +468,7 @@ i {
     position: absolute;
     border-bottom: 2px solid #ceb475;
     top: 50%;
-    left: 255px;
+    left: 260px;
 }
 
 .page-contacts h3 {
@@ -503,6 +508,7 @@ i {
 	justify-content: space-between;
 	height: 50px;
 	margin-bottom: 45px;
+	width: 935px;
 }
 
 .page-contacts form input {
@@ -519,7 +525,7 @@ i {
 .page-contacts form textarea {
 	font-family: 'Lora', serif;
 	font-size: 30px;
-	width: 875px;
+	width: 935px;
 	height: 183px;
 	resize: none;
 	background-color: transparent;
