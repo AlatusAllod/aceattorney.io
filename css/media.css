@@ -155,6 +155,7 @@
 
 	.page-statistics .statistics-list {
 		flex-direction: column;
+		height: 1000px;
 	}
 
 	.page-statistics .statistics-list .list {
