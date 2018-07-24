@@ -274,6 +274,7 @@ i {
 	flex-direction: column;
 	align-items: center;
 	margin: 0 50px;
+	height: 140px;
 }
 
 .page-statistics .statistics-list h4 {
