@@ -41,6 +41,10 @@ i {
 	color: white;
 }
 
+.navigation {
+	width: 100%;
+}
+
 .header-top {
 	background-color: rgb(21, 23, 31);
 }
@@ -62,15 +66,23 @@ i {
 	background-color: rgba(21, 23, 31, 0.6);
 }
 
-.header-menu .wrapper ul {
+.header-menu .wrapper nav {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 52px;
 }
 
+.header-menu .wrapper nav i {
+	display: none;
+}
+
+.header-menu .wrapper nav ul {
+	display: none;
+}
+
 .header-menu .callback {
-	display: block;
 	white-space: normal;
 	text-align: center;
 	border: 1px solid #ceb475;
