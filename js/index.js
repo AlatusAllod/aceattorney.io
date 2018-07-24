@@ -4,7 +4,6 @@ jQuery(function($) {
 	}); 
 });
 
-
 $("nav i").on("click", function() {
 	let $nav = $("nav ul");
     if ($nav.css('display')=='none') {
@@ -12,4 +11,8 @@ $("nav i").on("click", function() {
 	} else {
 	  $nav.css('display', 'none');
 	}
- });
+});
+
+$("nav ul li").on("click", function() {
+	$("nav ul").css('display', 'none');
+});
