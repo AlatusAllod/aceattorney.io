@@ -267,6 +267,7 @@ i {
 .page-statistics .statistics-list {
 	display: flex;
 	justify-content: center;
+	border: 1px solid green;
 }
 
 .page-statistics .statistics-list div {
