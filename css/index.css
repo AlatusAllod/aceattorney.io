@@ -1,0 +1,582 @@
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+i {
+	color: #ceb475 !important;
+	margin-right: 15px;
+}
+
+.wrapper {
+	padding: 0 390px;
+}
+
+.page-header {
+	display: flex;
+	flex-direction: column;
+	height: 960px;
+	background-image: url(../img/page-header-background.jpg);
+	color: white;
+}
+
+.header-top {
+	background-color: rgb(21, 23, 31);
+}
+
+.header-top .wrapper {
+	font-family: 'Lora', serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 64px;
+}
+
+.header-top .logo {
+	color: #ceb475;
+	font-size: 34px;
+}
+
+.header-menu {
+	background-color: rgba(21, 23, 31, 0.6);
+}
+
+.header-menu .wrapper ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 52px;
+}
+
+.header-menu .callback {
+	border: 1px solid #ceb475;
+	border-radius: 4px;
+	padding: 10px 19px;
+}
+
+.page-header h1 {
+	font-family: 'Lora', serif;
+	font-size: 97px;
+	color: #ceb475;
+	margin-top: 240px;
+	margin-bottom: 40px;
+}
+
+.page-header h2 {
+	font-size: 48px;
+}
+
+.page-header button {
+	border: none;
+	border-radius: 5px;
+	width: 458px;
+	height: 76px;
+	background-color: #ceb475;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	color: black;
+	margin-top: 40px;
+}
+
+.page-practice .wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 708px;
+	color: black;
+}
+
+.page-practice h2 {
+	position: relative;
+	font-family: 'Lora', serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	align-self: center;
+	margin-top: 130px;
+	margin-bottom: 90px;
+}
+
+.page-practice h2:before {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: -88px;
+}
+
+.page-practice h2:after {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: 455px;
+}
+
+.page-practice .practice-list {
+	display: flex;
+	justify-content: space-around;
+}
+
+.page-practice .practice-list .list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.page-practice .practice-list .list h3 {
+	margin-top: 55px;
+	margin-bottom: 45px;
+	font-family: 'Lora', serif;
+	font-size: 26px;
+}
+
+.page-practice .practice-list .list p {
+	width: 235px;
+} 
+
+.page-about {
+	background-image: url(../img/page-about-background.jpg);
+}
+
+.page-about .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 709px;
+	color: white;
+	padding: 0 488px;
+}
+
+.page-about h2 {
+	position: relative;
+	text-transform: uppercase;
+	margin-top: 120px;
+	margin-bottom: 85px;
+	font-family: 'Lora', serif;
+	font-size: 40px;
+}
+
+.page-about h2:before {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: -88px;
+}
+
+.page-about h2:after {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: 160px;
+}
+
+.page-about h3 {
+	color: #ceb475;
+	font-family: 'Lora', serif;
+	font-size: 30px;
+}
+
+.page-about p:first-of-type {
+	margin-top: 50px;
+	margin-bottom: 55px;
+}
+
+.page-statistics .wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 441px;
+	color: black;
+}
+
+.page-statistics h2 {
+	position: relative;
+	align-self: center;
+	text-transform: uppercase;
+	margin-top: 95px;
+	margin-bottom: 100px;
+	font-family: 'Lora', serif;
+	font-size: 40px;
+}
+
+.page-statistics h2:before {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: -88px;
+}
+
+.page-statistics h2:after {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: 630px;
+}
+
+.page-statistics .statistics-list {
+	display: flex;
+	justify-content: center;
+}
+
+.page-statistics .statistics-list .list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 50px;
+}
+
+.page-statistics .statistics-list span:first-of-type {
+	transform: translateX(8px);
+	font-family: 'Lora', serif;
+	font-size: 70px;
+	margin-bottom: 50px;
+	color: #ceb475;
+}
+
+.page-statistics .statistics-list .list span:last-of-type {
+	font-family: 'Lora', serif;
+	font-size: 30px;
+}
+
+.page-cases {
+	background-image: url(../img/page-cases-background.jpg);
+}
+
+.page-cases .wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 960px;
+	color: white;
+}
+
+.page-cases h2 {
+	position: relative;
+	align-self: center;
+	text-transform: uppercase;
+	margin-top: 105px;
+	margin-bottom: 75px;
+	font-family: 'Lora', serif;
+	font-size: 40px;
+}
+
+.page-cases h2:before {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: -88px;
+}
+
+.page-cases h2:after {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: 470px;
+}
+
+.page-cases .cases-list {
+	display: flex;
+	justify-content: space-between;
+	height: 615px;
+}
+
+.page-cases .arrow-left {
+	align-self: center;
+	border: 26px solid transparent; 
+	border-right: 26px solid #ceb475; 
+}
+
+.page-cases .arrow-right {
+	align-self: center;
+	border: 26px solid transparent; 
+	border-left: 26px solid #ceb475; 
+}
+
+.page-cases .list-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-cases .content-component {
+	display: flex;
+	margin-left: 135px;
+	margin-right: 70px;
+	margin-bottom: 70px;
+}
+
+.page-cases .content-component:last-of-type {
+	margin-bottom: 0;
+}
+
+.page-cases .content-component img {
+	align-self: flex-end;
+	transform: translateY(25px);
+}
+
+.page-cases .content-component h3 {
+	text-transform: uppercase;
+	font-family: 'Lora', serif;
+	font-size: 30px;
+	color: #ceb475;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+.page-cases .component-description {
+	margin-left: 45px;
+}
+
+.page-cases ul {
+	align-self: center;
+	margin-top: 65px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.page-cases li {
+	position: relative;
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 2px;
+	background: #ceb475;
+	margin: 11px;
+}
+
+.page-cases li a {
+	transform: translate(-4px, -4px);
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background: transparent;
+}
+
+.page-cases li .active {
+	border: 1px solid #ceb475;
+	border-radius: 50%;
+}
+
+.page-important .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 960px;
+	color: black;
+	padding: 0 488px;
+}
+
+.page-important h2 {
+	position: relative;
+	align-self: center;
+	text-transform: uppercase;
+	margin-top: 85px;
+	margin-bottom: 55px;
+	font-family: 'Lora', serif;
+	font-size: 40px;
+}
+
+.page-important h2:before {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: -88px;
+}
+
+.page-important h2:after {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: 510px;
+}
+
+.page-important h3 {
+	text-transform: uppercase;
+	font-family: 'Lora', serif;
+	font-size: 30px;
+}
+
+.page-important p {
+	margin-top: 35px;
+	margin-bottom: 100px
+}
+
+.page-important p:last-of-type {
+	margin-bottom: 0;
+}
+
+.page-contacts {
+	background-image: url(../img/page-contacts-background.jpg);
+}
+
+.page-contacts .wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 960px;
+	color: white;
+	padding: 0 488px;
+}
+
+.page-contacts h2 {
+	position: relative;
+	align-self: center;
+	text-transform: uppercase;
+	margin-top: 85px;
+	margin-bottom: 63px;
+	font-family: 'Lora', serif;
+	font-size: 40px;
+}
+
+.page-contacts h2:before {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: -88px;
+}
+
+.page-contacts h2:after {
+    display: block;
+    width: 51px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #ceb475;
+    top: 50%;
+    left: 255px;
+}
+
+.page-contacts h3 {
+	align-self: center;
+	font-family: 'Lora', serif;
+	font-size: 30px;
+}
+
+.page-contacts table {
+	font-family: 'Lora', serif;
+	font-size: 30px;
+	height: 120px;
+	width: 945px;
+	margin-top: 55px;
+	margin-bottom: 80px;
+	border-collapse: collapse;
+}
+
+.page-contacts td:first-of-type {
+	width: 585px;
+}
+
+.page-contacts td {
+	vertical-align: middle;
+}
+
+.page-contacts form {
+	font-family: 'Lora', serif;
+	font-size: 30px;	
+}
+
+.page-contacts form legend {
+	text-align: center;
+	margin-bottom: 55px;
+}
+
+.page-contacts form fieldset {
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	margin-bottom: 45px;
+}
+
+.page-contacts form input {
+	width: 292px;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+	font-size: 20px;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+
+.page-contacts form textarea {
+	font-family: 'Lora', serif;
+	font-size: 30px;
+	width: 100%;
+	height: 183px;
+	resize: none;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+	font-size: 20px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-bottom: 35px;
+}
+
+.page-contacts form input[type="submit"] {
+	font-size: 30px;
+	width: 290px;
+	height: 53px;
+	background-color: #ceb475;
+	border: none;
+	color: black;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-footer {
+	background-color: #15171f;
+}
+
+.page-footer .wrapper {
+	padding: 0 488px;
+}
+
+.page-footer .wrapper ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100px;
+	color: white;
+	text-align: center;
+}
+
+.page-footer .callback {
+	border: 1px solid #ceb475;
+	border-radius: 4px;
+	padding: 10px 19px;
+}

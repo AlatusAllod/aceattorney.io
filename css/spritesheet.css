@@ -1,0 +1,32 @@
+.sprite {
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-courthouse {
+    width: 121px;
+    height: 112px;
+    transform: translateY(4px);
+    background-position: -5px -5px;
+}
+
+.sprite-gavel {
+    width: 121px;
+    height: 112px;
+    transform: translateY(9px);
+    background-position: -5px -127px;
+}
+
+.sprite-handcuffs {
+    width: 121px;
+    height: 112px;
+    transform: translateY(10px);
+    background-position: -5px -249px;
+}
+
+.sprite-libra {
+    width: 121px;
+    height: 112px;
+    background-position: -5px -371px;
+}
