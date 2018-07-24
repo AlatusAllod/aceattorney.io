@@ -228,6 +228,7 @@
 
 	.page-contacts form fieldset {
 		flex-direction: column;
+		justify-content: space-between;
 		height: 300px;
 	}
 
