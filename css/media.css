@@ -11,7 +11,7 @@
 		font-size: 16px;
 	}
 
-	.page-important {
+	.page-important .wrapper {
 		height: 1100px;
 	}
 
@@ -26,7 +26,7 @@
 		padding: 0 5% !important;
 	}
 
-	.page-practice {
+	.page-practice .wrapper {
 		height: 1080px;
 	}
 
@@ -127,7 +127,7 @@
 		font-size: 20px;
 	}
 
-	.page-practice {
+	.page-practice .wrapper {
 		height: 1850px;
 	}
 
@@ -139,7 +139,7 @@
 		display: none !important;
 	}
 
-	.page-about {
+	.page-about .wrapper {
 		height: 900px;
 	}
 
@@ -149,13 +149,12 @@
 		text-align: center;
 	}
 
-	.page-statistics {
+	.page-statistics .wrapper {
 		height: 1000px;
 	}
 
 	.page-statistics .statistics-list {
 		flex-direction: column;
-		height: 1000px;
 	}
 
 	.page-statistics .statistics-list .list {
@@ -191,7 +190,7 @@
 		display: none;
 	}
 
-	.page-important {
+	.page-important .wrapper {
 		height: 1450px;
 	}
 
@@ -199,7 +198,7 @@
 		font-size: 25px !important;
 	}
 
-	.page-contacts {
+	.page-contacts .wrapper {
 		height: 1600px;
 	}
 
@@ -286,7 +285,7 @@
 		font-size: 25px;
 	}
 
-	.page-about {
+	.page-about .wrapper {
 		height: 1250px;
 	}
 
@@ -294,7 +293,7 @@
 		font-size: 18px !important;
 	}
 
-	.page-important {
+	.page-important .wrapper {
 		height: 2100px;
 	}
 
