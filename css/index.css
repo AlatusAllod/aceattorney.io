@@ -269,7 +269,7 @@ i {
 	justify-content: center;
 }
 
-.page-statistics .statistics-list .list {
+.page-statistics .statistics-list div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -288,7 +288,7 @@ i {
 	color: #ceb475;
 }
 
-.page-statistics .statistics-list .list p:last-child {
+.page-statistics .statistics-list div p:last-child {
 	font-family: 'Lora', serif;
 	font-size: 30px;
 }
