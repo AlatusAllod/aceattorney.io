@@ -267,6 +267,7 @@ i {
 .page-statistics .statistics-list {
 	display: flex;
 	justify-content: center;
+	padding: 1px;
 }
 
 .page-statistics .statistics-list div {
@@ -274,8 +275,6 @@ i {
 	flex-direction: column;
 	align-items: center;
 	margin: 0 50px;
-	padding: 1px;
-	clear: both;
 }
 
 .page-statistics .statistics-list p {
