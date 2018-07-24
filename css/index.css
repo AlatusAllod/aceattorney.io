@@ -267,7 +267,6 @@ i {
 .page-statistics .statistics-list {
 	display: flex;
 	justify-content: center;
-	border: 1px solid transparent;
 }
 
 .page-statistics .statistics-list .list {
@@ -275,6 +274,8 @@ i {
 	flex-direction: column;
 	align-items: center;
 	margin: 0 50px;
+	clear: left; 
+	float: left;
 }
 
 .page-statistics .statistics-list p {
