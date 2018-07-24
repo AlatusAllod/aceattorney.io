@@ -167,7 +167,7 @@ i {
 	margin-right: 10px;
 }
 
-.page-practice .practice-list .list:last-child {
+.page-practice .practice-list div:last-child {
 	margin-right: 0;
 }
 
@@ -361,7 +361,7 @@ i {
 	height: 265px;
 }
 
-.page-cases .content-component:last-child {
+.page-cases .list-content div:last-child {
 	margin-bottom: 0;
 }
 
