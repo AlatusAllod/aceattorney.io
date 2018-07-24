@@ -275,6 +275,7 @@ i {
 	align-items: center;
 	margin: 0 50px;
 	height: 140px;
+	border: 1px solid red;
 }
 
 .page-statistics .statistics-list h4 {
