@@ -276,7 +276,11 @@ i {
 	margin: 0 50px;
 }
 
-.page-statistics .statistics-list span:first-of-type {
+.page-statistics .statistics-list p {
+	white-space: nowrap;
+}
+
+.page-statistics .statistics-list p:first-of-type {
 	transform: translateX(8px);
 	font-family: 'Lora', serif;
 	font-size: 70px;
@@ -284,7 +288,7 @@ i {
 	color: #ceb475;
 }
 
-.page-statistics .statistics-list .list span:last-of-type {
+.page-statistics .statistics-list .list p:last-of-type {
 	font-family: 'Lora', serif;
 	font-size: 30px;
 }
@@ -514,11 +518,12 @@ i {
 	height: 50px;
 }
 
-.page-contacts .table-row span{
+.page-contacts .table-row p{
 	display: table-cell;
+	white-space: nowrap;
 }
 
-.page-contacts .table-row span:first-child {
+.page-contacts .table-row p:first-child {
 	width: 75%;
 	padding-right: 25px;
 }
