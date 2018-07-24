@@ -178,7 +178,7 @@
 		margin-bottom: 30px
 	}
 
-	.page-cases .content-component:last-of-type {
+	.page-cases .content-component:last-child {
 		display: none;
 	}
 
@@ -253,7 +253,7 @@
 		width: 50%;
 	}
 
-	.page-footer .wrapper nav a:last-of-type {
+	.page-footer .wrapper nav a:last-child {
 		width: 100%;
 	}
 }

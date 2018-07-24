@@ -167,7 +167,7 @@ i {
 	margin-right: 10px;
 }
 
-.page-practice .practice-list .list:last-of-type {
+.page-practice .practice-list .list:last-child {
 	margin-right: 0;
 }
 
@@ -280,7 +280,7 @@ i {
 	white-space: nowrap;
 }
 
-.page-statistics .statistics-list p:first-of-type {
+.page-statistics .statistics-list p:first-child {
 	transform: translateX(8px);
 	font-family: 'Lora', serif;
 	font-size: 70px;
@@ -288,7 +288,7 @@ i {
 	color: #ceb475;
 }
 
-.page-statistics .statistics-list .list p:last-of-type {
+.page-statistics .statistics-list .list p:last-child {
 	font-family: 'Lora', serif;
 	font-size: 30px;
 }
@@ -361,7 +361,7 @@ i {
 	height: 265px;
 }
 
-.page-cases .content-component:last-of-type {
+.page-cases .content-component:last-child {
 	margin-bottom: 0;
 }
 
@@ -458,7 +458,7 @@ i {
 	margin-bottom: 100px
 }
 
-.page-important p:last-of-type {
+.page-important p:last-child {
 	margin-bottom: 0;
 }
 
