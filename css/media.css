@@ -1,6 +1,21 @@
 @media (max-width: 1300px) {
+
 	.wrapper {
 		padding: 0 5% !important;
+	}
+
+	.page-practice {
+		height: 1080px;
+	}
+
+	.page-practice .practice-list {
+		flex-wrap: wrap;
+	}
+
+	.page-practice .practice-list .list {
+		width: 40%;
+		margin-right: 0;
+		margin-bottom: 40px;
 	}
 }
 
@@ -39,12 +54,12 @@
 		height: 52px;
 	}
 
-	h1 {
+	.page-header h1 {
 		margin-top: 100px !important;
 		font-size: 50px !important;
 	}
 
-	h2 {
+	.page-header h2 {
 		font-size: 30px !important;
 	}
 
@@ -53,17 +68,29 @@
 		height: 53px;
 		font-size: 20px;
 	}
+
+	.page-practice {
+		height: 1850px;
+	}
+
+	.page-practice .practice-list .list {
+		width: 90%;
+	}
+
+	.page-practice h2:after, .page-practice h2:before {
+		display: none;
+	}
 }
 
 @media (max-width: 480px) {
 
-	h1 {
+	.page-header h1 {
 		text-align: center !important;
 		margin-top: 50px !important;
 		font-size: 35px !important;
 	}
 
-	h2 {
+	.page-header h2 {
 		text-align: center !important;
 		font-size: 18px !important;
 	}
@@ -75,5 +102,10 @@
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.page-practice h2 {
+		margin-top: 100px;
+		font-size: 25px;
 	}
 }

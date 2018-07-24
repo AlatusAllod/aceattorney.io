@@ -43,6 +43,7 @@ i {
 
 .navigation {
 	width: 100%;
+	z-index: 100;
 }
 
 .header-top {
@@ -150,6 +151,10 @@ i {
     left: 455px;
 }
 
+.page-practice i {
+	margin-right: 0;
+}
+
 .page-practice .practice-list {
 	display: flex;
 	justify-content: space-around;
@@ -159,6 +164,11 @@ i {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-right: 10px;
+}
+
+.page-practice .practice-list .list:last-of-type {
+	margin-right: 0;
 }
 
 .page-practice .practice-list .list h3 {
@@ -173,6 +183,8 @@ i {
 
 .page-about {
 	background-image: url(../img/page-about-background.jpg);
+	background-size: cover;
+    background-position: 25% 100%;
 }
 
 .page-about .wrapper {
