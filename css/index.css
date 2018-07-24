@@ -6,13 +6,29 @@ body {
 	font-size: 20px;
 }
 
+h2 {
+	font-family: 'Lora', serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	align-self: center;
+}
+
+h3 {
+	font-family: 'Lora', serif;
+	font-size: 30px;
+}
+
+a, span, h2, h3, legend {
+	white-space: nowrap;
+}
+
 i {
 	color: #ceb475 !important;
 	margin-right: 15px;
 }
 
 .wrapper {
-	padding: 0 390px;
+	padding: 0 20.3125%;
 }
 
 .page-header {
@@ -63,10 +79,13 @@ i {
 	color: #ceb475;
 	margin-top: 240px;
 	margin-bottom: 40px;
+	white-space: nowrap;
 }
 
 .page-header h2 {
+	font-family: 'Raleway', sans-serif;
 	font-size: 48px;
+	text-transform: none;
 }
 
 .page-header button {
@@ -90,10 +109,6 @@ i {
 
 .page-practice h2 {
 	position: relative;
-	font-family: 'Lora', serif;
-	font-size: 40px;
-	text-transform: uppercase;
-	align-self: center;
 	margin-top: 130px;
 	margin-bottom: 90px;
 }
@@ -132,7 +147,6 @@ i {
 .page-practice .practice-list .list h3 {
 	margin-top: 55px;
 	margin-bottom: 45px;
-	font-family: 'Lora', serif;
 	font-size: 26px;
 }
 
@@ -150,16 +164,13 @@ i {
 	align-items: center;
 	height: 709px;
 	color: white;
-	padding: 0 488px;
+	padding: 0 25.416666666666666666666666666667%;
 }
 
 .page-about h2 {
 	position: relative;
-	text-transform: uppercase;
 	margin-top: 120px;
 	margin-bottom: 85px;
-	font-family: 'Lora', serif;
-	font-size: 40px;
 }
 
 .page-about h2:before {
@@ -184,8 +195,6 @@ i {
 
 .page-about h3 {
 	color: #ceb475;
-	font-family: 'Lora', serif;
-	font-size: 30px;
 }
 
 .page-about p:first-of-type {
@@ -202,12 +211,8 @@ i {
 
 .page-statistics h2 {
 	position: relative;
-	align-self: center;
-	text-transform: uppercase;
 	margin-top: 95px;
 	margin-bottom: 100px;
-	font-family: 'Lora', serif;
-	font-size: 40px;
 }
 
 .page-statistics h2:before {
@@ -268,12 +273,8 @@ i {
 
 .page-cases h2 {
 	position: relative;
-	align-self: center;
-	text-transform: uppercase;
 	margin-top: 105px;
 	margin-bottom: 75px;
-	font-family: 'Lora', serif;
-	font-size: 40px;
 }
 
 .page-cases h2:before {
@@ -337,8 +338,6 @@ i {
 
 .page-cases .content-component h3 {
 	text-transform: uppercase;
-	font-family: 'Lora', serif;
-	font-size: 30px;
 	color: #ceb475;
 	text-align: center;
 	margin-bottom: 45px;
@@ -387,17 +386,13 @@ i {
 	align-items: center;
 	height: 960px;
 	color: black;
-	padding: 0 488px;
+	padding: 0 25.416666666666666666666666666667%;
 }
 
 .page-important h2 {
 	position: relative;
-	align-self: center;
-	text-transform: uppercase;
 	margin-top: 85px;
 	margin-bottom: 55px;
-	font-family: 'Lora', serif;
-	font-size: 40px;
 }
 
 .page-important h2:before {
@@ -422,8 +417,6 @@ i {
 
 .page-important h3 {
 	text-transform: uppercase;
-	font-family: 'Lora', serif;
-	font-size: 30px;
 }
 
 .page-important p {
@@ -444,17 +437,13 @@ i {
 	flex-direction: column;
 	height: 960px;
 	color: white;
-	padding: 0 488px;
+	padding: 0 25.416666666666666666666666666667%;
 }
 
 .page-contacts h2 {
 	position: relative;
-	align-self: center;
-	text-transform: uppercase;
 	margin-top: 85px;
 	margin-bottom: 63px;
-	font-family: 'Lora', serif;
-	font-size: 40px;
 }
 
 .page-contacts h2:before {
@@ -479,8 +468,6 @@ i {
 
 .page-contacts h3 {
 	align-self: center;
-	font-family: 'Lora', serif;
-	font-size: 30px;
 }
 
 .page-contacts table {
@@ -532,7 +519,7 @@ i {
 .page-contacts form textarea {
 	font-family: 'Lora', serif;
 	font-size: 30px;
-	width: 100%;
+	width: 875px;
 	height: 183px;
 	resize: none;
 	background-color: transparent;
@@ -563,7 +550,7 @@ i {
 }
 
 .page-footer .wrapper {
-	padding: 0 488px;
+	padding: 0 25.416666666666666666666666666667%;
 }
 
 .page-footer .wrapper ul {
