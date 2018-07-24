@@ -351,9 +351,10 @@ i {
 
 .page-cases .content-component {
 	display: flex;
-	margin-left: 135px;
-	margin-right: 70px;
+	margin-left: 7.03125%;
+	margin-right: 3.645833333333333333333333333333%;
 	margin-bottom: 70px;
+	height: 265px;
 }
 
 .page-cases .content-component:last-of-type {
@@ -373,7 +374,7 @@ i {
 }
 
 .page-cases .component-description {
-	margin-left: 45px;
+	margin-left: 40px;
 }
 
 .page-cases ul {
@@ -464,6 +465,7 @@ i {
 .page-contacts .wrapper {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	height: 960px;
 	color: white;
 	padding: 0 25.416666666666666666666666666667%;
@@ -499,27 +501,31 @@ i {
 	align-self: center;
 }
 
-.page-contacts table {
+.page-contacts .table {
 	font-family: 'Lora', serif;
 	font-size: 30px;
-	height: 120px;
-	width: 945px;
+	display: table;
 	margin-top: 55px;
 	margin-bottom: 80px;
-	border-collapse: collapse;
 }
 
-.page-contacts td:first-of-type {
-	width: 585px;
+.page-contacts .table-row {
+	display: table-row;
+	height: 50px;
 }
 
-.page-contacts td {
-	vertical-align: middle;
+.page-contacts .table-row span{
+	display: table-cell;
+}
+
+.page-contacts .table-row span:first-child {
+	width: 75%;
+	padding-right: 25px;
 }
 
 .page-contacts form {
 	font-family: 'Lora', serif;
-	font-size: 30px;	
+	font-size: 30px;
 }
 
 .page-contacts form legend {
@@ -532,11 +538,10 @@ i {
 	justify-content: space-between;
 	height: 50px;
 	margin-bottom: 45px;
-	width: 935px;
 }
 
 .page-contacts form input {
-	width: 292px;
+	width: 30%;
 	background-color: transparent;
 	border: 1px solid white;
 	color: white;
@@ -583,7 +588,7 @@ i {
 	padding: 0 25.416666666666666666666666666667%;
 }
 
-.page-footer .wrapper ul {
+.page-footer .wrapper nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
