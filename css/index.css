@@ -276,11 +276,7 @@ i {
 	margin: 0 50px;
 }
 
-.page-statistics .statistics-list p {
-	white-space: nowrap;
-}
-
-.page-statistics .statistics-list p:first-child {
+.page-statistics .statistics-list div h4 {
 	transform: translateX(8px);
 	font-family: 'Lora', serif;
 	font-size: 70px;
@@ -288,9 +284,10 @@ i {
 	color: #ceb475;
 }
 
-.page-statistics .statistics-list div p:last-child {
+.page-statistics .statistics-list div p {
 	font-family: 'Lora', serif;
 	font-size: 30px;
+	white-space: nowrap;
 }
 
 .page-cases {
