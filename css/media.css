@@ -215,7 +215,7 @@
 		margin-bottom: 30px;
 	}
 
-	.page-contacts .table p{
+	.page-contacts .table p {
 		display: block;
 		margin-bottom: 20px;
 		font-size: 20px;
@@ -228,12 +228,13 @@
 
 	.page-contacts form fieldset {
 		flex-direction: column;
-		height: 300px !important;
+		height: auto;
 	}
 
 	.page-contacts form input {
 		height: 80px;
 		width: 100%;
+		margin-bottom: 40px;
 	}
 
 	.page-contacts textarea {
