@@ -274,6 +274,8 @@ i {
 	flex-direction: column;
 	align-items: center;
 	margin: 0 50px;
+	padding: 1px;
+	clear: both;
 }
 
 .page-statistics .statistics-list p {
