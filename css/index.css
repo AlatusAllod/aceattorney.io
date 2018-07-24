@@ -276,15 +276,15 @@ i {
 	margin: 0 50px;
 }
 
-.page-statistics .statistics-list div h4 {
-	transform: translateX(8px);
+.page-statistics .statistics-list h4 {
 	font-family: 'Lora', serif;
 	font-size: 70px;
 	margin-bottom: 50px;
 	color: #ceb475;
+	transform: translateX(8px);
 }
 
-.page-statistics .statistics-list div p {
+.page-statistics .statistics-list p {
 	font-family: 'Lora', serif;
 	font-size: 30px;
 	white-space: nowrap;
