@@ -11,8 +11,10 @@ $("nav i").on("click", function() {
 	} else {
 	  $nav.css('display', 'none');
 	}
+	$(".header-top").toggle();
 });
 
 $("nav ul li").on("click", function() {
 	$("nav ul").css('display', 'none');
+	$(".header-top").toggle();
 });
