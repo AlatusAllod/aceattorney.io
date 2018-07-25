@@ -234,11 +234,11 @@
 	.page-contacts form input {
 		height: 80px;
 		width: 100%;
-		margin-bottom: 30px;
+		margin-bottom: 20px !important;
 	}
-	
-	.page-contacts form input:last-of-type {
-		margin-bottom: 0;
+
+	.page-contacts form input:last-child {
+		margin-bottom: 0 !important;
 	}
 
 	.page-contacts textarea {
