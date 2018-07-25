@@ -351,7 +351,23 @@ i {
 
 .page-cases .list-content {
 	display: flex;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.list-content .cotent-group {
+	left: 1000px;
+	display: flex;
+	position: absolute;
 	flex-direction: column;
+	width: 100%;
+	transition-property: none;
+	transition-duration: 0.5s
+}
+
+.list-content .cotent-group.active {
+	left: 0;
 }
 
 .page-cases .content-component {
@@ -410,7 +426,7 @@ i {
 	background: transparent;
 }
 
-.page-cases li .active {
+.page-cases li.active a {
 	border: 1px solid #ceb475;
 	border-radius: 50%;
 }
