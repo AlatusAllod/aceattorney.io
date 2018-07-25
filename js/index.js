@@ -1,12 +1,12 @@
 jQuery(function($) {
 	$(document).ready( function() {
-		$('.navigation').stickUp(); 
+		$('.navigation').stickUp(); //плавающее меню
 
-		$("a").on("click", function(event) { 
-			event.preventDefault();
+		$("a").on("click", function(event) { //отключил ссылки
+			event.preventDefault(); 
 		});
 
-		$("nav i").on("click", function() {
+		$("nav i").on("click", function() { //переключение меню по нажатию на гамбургер
 			let $nav = $("nav ul");
 		    if ($nav.css('display')=='none') {
 			  $nav.css('display', 'flex');
@@ -15,18 +15,18 @@ jQuery(function($) {
 			}
 		});
 
-		$("nav ul li").on("click", function() {
+		$("nav ul li").on("click", function() {  //закрытие меню при выборе раздела
 			$("nav ul").css('display', 'none');
 		});
 
-		$("nav, .header-top").on("click","a", function (event) {
+		$("nav, .header-top").on("click","a", function (event) { //плавная якорная прокрутка
 		    event.preventDefault();
-		    var id  = $(this).attr('href'),
+		    let id  = $(this).attr('href'),
 		    top = $(id).offset().top;
 		    $('body,html').animate({scrollTop: top}, 1000);
 		});
 
-		$('a.callback, .page-header button').click( function(event){
+		$('a.callback, .page-header button').click( function(event){ //модальное окно
 			event.preventDefault();
 			$('#overlay').fadeIn(400,
 			 	function(){ 
@@ -36,7 +36,7 @@ jQuery(function($) {
 			});
 		});
 		
-		$('#modal_close, #overlay').click( function(){
+		$('#modal_close, #overlay').click( function(){ //выход из модального окна
 			$('#modal_form')
 				.animate({opacity: 0, top: '45%'}, 200,
 					function(){
@@ -46,9 +46,32 @@ jQuery(function($) {
 				);
 		});
 
-		$(".cases-list .arrow-right").on("click", function(event) {
+		$(".cases-list .arrow-right").on("click", function(event) { //карусель, стрелка вправо
 		    event.preventDefault();
-		    var $active = $(".cotent-group.active");
+		    let $active = $(".cotent-group.active");
+		    let $elements = $(".cotent-group");
+
+		    if ($active[0]  == $elements[4]) {
+		    	$('.page-cases ul li:last').toggleClass('active');
+		    	$('.page-cases ul li:first').toggleClass('active');
+
+		    	$(".cotent-group").not(".cotent-group.active").css('left', '1000px');
+
+				$active.css('transition-property', 'left').css('left', '1000px');
+		    	setTimeout(function(){
+		        	$active.toggleClass('active');
+		        	$active.css('transition-property', 'none');
+		    	},500);
+
+		    	var $next = $(".cotent-group:first");
+				$next.css('transition-property', 'left').css('left', '0px');
+				setTimeout(function(){
+		        	$next.toggleClass('active');
+		        	$next.css('transition-property', 'none');
+		    	},500);
+		    	return;
+		    }
+
 			$active.css('transition-property', 'left').css('left', '-1000px');
 	    	setTimeout(function(){
 	        	$active.toggleClass('active');
@@ -66,9 +89,32 @@ jQuery(function($) {
 	    	$('.page-cases ul li.active:first').toggleClass('active');
 		});
 
-		$(".cases-list .arrow-left").on("click", function(event) {
+		$(".cases-list .arrow-left").on("click", function(event) { //карусель, стрелка влево
 		    event.preventDefault();
-		    var $active = $(".cotent-group.active");
+		    let $active = $(".cotent-group.active");
+		    let $elements = $(".cotent-group");
+
+		    if ($active[0] == $elements[0]) {
+		    	$('.page-cases ul li:last').toggleClass('active');
+		    	$('.page-cases ul li:first').toggleClass('active');
+
+		    	$(".cotent-group").not(".cotent-group.active").css('left', '-1000px');
+
+				$active.css('transition-property', 'left').css('left', '-1000px');
+		    	setTimeout(function(){
+		        	$active.toggleClass('active');
+		        	$active.css('transition-property', 'none');
+		    	},500);
+
+		    	var $next = $(".cotent-group:last");
+				$next.css('transition-property', 'left').css('left', '0px');
+				setTimeout(function(){
+		        	$next.toggleClass('active');
+		        	$next.css('transition-property', 'none');
+		    	},500);
+		    	return;
+		    }
+
 			$active.css('transition-property', 'left').css('left', '1000px');
 	    	setTimeout(function(){
 	        	$active.toggleClass('active');
