@@ -96,11 +96,13 @@
 	.header-top .wrapper {
 		flex-direction: column;
 		justify-content: space-around;
-		height: 120px;
+		height: 80px;
+		font-size: 15px;
 	}
 
 	.header-top .wrapper .logo {
 		order: -1;
+		font-size: 16px;
 	}
 
 	.header-menu .wrapper nav > a {
