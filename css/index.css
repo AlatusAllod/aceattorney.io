@@ -366,6 +366,10 @@ i {
 	transition-duration: 0.5s;
 }
 
+.list-content .cotent-group:last-of-type {
+	left: -1000px;
+}
+
 .list-content .cotent-group.active {
 	left: 0;
 }

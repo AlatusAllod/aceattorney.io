@@ -47,17 +47,18 @@ jQuery(function($) {
 		});
 
 		$(".cases-list .arrow-right").on("click", function(event) { //карусель, стрелка вправо
-		    event.preventDefault();
+			event.preventDefault();
 		    let $active = $(".cotent-group.active");
 		    let $elements = $(".cotent-group");
 
+		    $(".cotent-group").css('left', '1000px');
+		    $(".cotent-group.active").css('left', '0px');
+
 		    if ($active[0]  == $elements[4]) {
 		    	$('.page-cases ul li:last').toggleClass('active');
-		    	$('.page-cases ul li:first').toggleClass('active');
+		    	$('.page-cases ul li:first').toggleClass('active');    	
 
-		    	$(".cotent-group").not(".cotent-group.active").css('left', '1000px');
-
-				$active.css('transition-property', 'left').css('left', '1000px');
+				$active.css('transition-property', 'left').css('left', '-1000px');
 		    	setTimeout(function(){
 		        	$active.toggleClass('active');
 		        	$active.css('transition-property', 'none');
@@ -91,14 +92,65 @@ jQuery(function($) {
 
 		$(".cases-list .arrow-left").on("click", function(event) { //карусель, стрелка влево
 		    event.preventDefault();
+			let $active = $(".cotent-group.active");
+			let $elements = $(".cotent-group");
+
+			$(".cotent-group").css('left', '-1000px');
+			$(".cotent-group.active").css('left', '0px');
+
+			if ($active[0] == $elements[0]) {
+			    $('.page-cases ul li:last').toggleClass('active');
+			    $('.page-cases ul li:first').toggleClass('active');
+
+				$active.css('transition-property', 'left').css('left', '1000px');
+			    setTimeout(function(){
+			        $active.toggleClass('active');
+			        $active.css('transition-property', 'none');
+			    },500);
+
+			    var $next = $(".cotent-group:last");
+				$next.css('transition-property', 'left').css('left', '0px');
+				setTimeout(function(){
+			        $next.toggleClass('active');
+			        $next.css('transition-property', 'none');
+			    },500);
+			    return;
+			}
+
+			$active.css('transition-property', 'left').css('left', '1000px');
+		    setTimeout(function(){
+		        $active.toggleClass('active');
+		        $active.css('transition-property', 'none');
+		    },500);
+
+			var $previous = $(".cotent-group.active").prev();
+			$previous.css('transition-property', 'left').css('left', '0px');
+			setTimeout(function(){
+		        $previous.toggleClass('active');
+		        $previous.css('transition-property', 'none');
+		    },500);
+
+		    $('.page-cases ul li.active').prev().toggleClass('active');
+		    $('.page-cases ul li.active:last').toggleClass('active');
+		});
+
+		$(".cotent-group").swipe( {
+	        swipeLeft:leftSwipe,
+	        swipeRight:rightSwipe,
+	        threshold: 75
+		});
+
+		function leftSwipe(event){
+	        event.preventDefault();
 		    let $active = $(".cotent-group.active");
 		    let $elements = $(".cotent-group");
 
-		    if ($active[0] == $elements[0]) {
-		    	$('.page-cases ul li:last').toggleClass('active');
-		    	$('.page-cases ul li:first').toggleClass('active');
+		    $(".cotent-group").css('left', '1000px');
+		    $(".cotent-group.active").css('left', '0px');
 
-		    	$(".cotent-group").not(".cotent-group.active").css('left', '-1000px');
+		    if ($active[0]  == $elements[4]) {
+		    	$('.page-cases ul li:last').toggleClass('active');
+		    	$('.page-cases ul li:first').toggleClass('active');    	
 
 				$active.css('transition-property', 'left').css('left', '-1000px');
 		    	setTimeout(function(){
@@ -106,7 +158,7 @@ jQuery(function($) {
 		        	$active.css('transition-property', 'none');
 		    	},500);
 
-		    	var $next = $(".cotent-group:last");
+		    	var $next = $(".cotent-group:first");
 				$next.css('transition-property', 'left').css('left', '0px');
 				setTimeout(function(){
 		        	$next.toggleClass('active');
@@ -115,21 +167,65 @@ jQuery(function($) {
 		    	return;
 		    }
 
-			$active.css('transition-property', 'left').css('left', '1000px');
+			$active.css('transition-property', 'left').css('left', '-1000px');
 	    	setTimeout(function(){
 	        	$active.toggleClass('active');
 	        	$active.css('transition-property', 'none');
 	    	},500);
 
+			var $next = $(".active + .cotent-group");
+			$next.css('transition-property', 'left').css('left', '0px');
+			setTimeout(function(){
+	        	$next.toggleClass('active');
+	        	$next.css('transition-property', 'none');
+	    	},500);
+
+	    	$('.page-cases ul li.active + li').toggleClass('active');
+	    	$('.page-cases ul li.active:first').toggleClass('active');
+		}
+
+		function rightSwipe(event){
+	        event.preventDefault();
+			let $active = $(".cotent-group.active");
+			let $elements = $(".cotent-group");
+
+			$(".cotent-group").css('left', '-1000px');
+			$(".cotent-group.active").css('left', '0px');
+
+			if ($active[0] == $elements[0]) {
+			    $('.page-cases ul li:last').toggleClass('active');
+			    $('.page-cases ul li:first').toggleClass('active');
+
+				$active.css('transition-property', 'left').css('left', '1000px');
+			    setTimeout(function(){
+			        $active.toggleClass('active');
+			        $active.css('transition-property', 'none');
+			    },500);
+
+			    var $next = $(".cotent-group:last");
+				$next.css('transition-property', 'left').css('left', '0px');
+				setTimeout(function(){
+			        $next.toggleClass('active');
+			        $next.css('transition-property', 'none');
+			    },500);
+			    return;
+			}
+
+			$active.css('transition-property', 'left').css('left', '1000px');
+		    setTimeout(function(){
+		        $active.toggleClass('active');
+		        $active.css('transition-property', 'none');
+		    },500);
+
 			var $previous = $(".cotent-group.active").prev();
 			$previous.css('transition-property', 'left').css('left', '0px');
 			setTimeout(function(){
-	        	$previous.toggleClass('active');
-	        	$previous.css('transition-property', 'none');
-	    	},500);
+		        $previous.toggleClass('active');
+		        $previous.css('transition-property', 'none');
+		    },500);
 
-	    	$('.page-cases ul li.active').prev().toggleClass('active');
-	    	$('.page-cases ul li.active:last').toggleClass('active');
-		});
+		    $('.page-cases ul li.active').prev().toggleClass('active');
+		    $('.page-cases ul li.active:last').toggleClass('active');
+		}
 	});
 });
