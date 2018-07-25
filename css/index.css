@@ -686,6 +686,7 @@ i {
 }
 
 #modal_form form legend {
+	display: inline-block;
 	text-align: center;
 	height: 60px;
 	color: white;

@@ -270,6 +270,18 @@
 	.page-footer .wrapper nav a:last-child {
 		width: 100%;
 	}
+
+	#modal_form {
+		width: 400px; 
+		height: 350px;
+		margin-top: -175px;
+		margin-left: -200px;
+	}
+
+	#modal_form form legend{
+		font-size: 20px;
+		margin: 50px;
+	}
 }
 
 @media (max-width: 480px) {
@@ -329,5 +341,27 @@
 
 	.page-footer .wrapper nav a {
 		width: 100%;
+	}
+
+	#modal_form {
+		width: 250px; 
+		height: 350px;
+		margin-top: -175px;
+		margin-left: -125px;
+	}
+
+	#modal_form form legend{
+		margin: 30px;
+	}
+
+	#modal_form form input[type="submit"] {
+		font-size: 20px;
+		width: 200px;
+		margin: 30px;
+	}
+
+	#modal_form form input {
+		width: 200px;
+		margin: 30px;
 	}
 }
