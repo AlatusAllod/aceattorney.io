@@ -134,7 +134,7 @@ jQuery(function($) {
 		    $('.page-cases ul li.active:last').toggleClass('active');
 		});
 
-		$(".cotent-group").swipe( {
+		$(".page-cases").swipe( {
 	        swipeLeft:leftSwipe,
 	        swipeRight:rightSwipe,
 	        threshold: 75
