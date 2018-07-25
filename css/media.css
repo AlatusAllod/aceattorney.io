@@ -97,6 +97,9 @@
 		flex-direction: column;
 		justify-content: space-around;
 		height: 80px;
+	}
+
+	.header-top .wrapper span {
 		font-size: 15px !important;
 	}
 
