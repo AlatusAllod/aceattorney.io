@@ -46,7 +46,7 @@ jQuery(function($) {
 				);
 		});
 
-		$(".cases-list .arrow-right").on("click", function(event) { //карусель, стрелка вправо
+		$(".cases-list .arrow-right").bind("click", function(event) { //карусель, стрелка вправо
 			event.preventDefault();
 		    let $active = $(".cotent-group.active");
 		    let $elements = $(".cotent-group");
@@ -141,6 +141,12 @@ jQuery(function($) {
 		});
 
 		function leftSwipe(event){ //свайп влево
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+			$(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});			
 	        event.preventDefault();
 		    let $active = $(".cotent-group.active");
 		    let $elements = $(".cotent-group");
@@ -163,6 +169,12 @@ jQuery(function($) {
 				setTimeout(function(){
 		        	$next.toggleClass('active');
 		        	$next.css('transition-property', 'none');
+		        	$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+			        $(".page-cases").swipe( {
+				        swipeLeft:leftSwipe,
+				        swipeRight:rightSwipe,
+				        threshold: 75
+				    });
 		    	},500);
 		    	return;
 		    }
@@ -178,13 +190,25 @@ jQuery(function($) {
 			setTimeout(function(){
 	        	$next.toggleClass('active');
 	        	$next.css('transition-property', 'none');
+	        	$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+	        	$(".page-cases").swipe( {
+			        swipeLeft:leftSwipe,
+			        swipeRight:rightSwipe,
+			        threshold: 75
+			    });
 	    	},500);
 
 	    	$('.page-cases ul li.active + li').toggleClass('active');
 	    	$('.page-cases ul li.active:first').toggleClass('active');
 		}
 
-		function rightSwipe(event){
+		function rightSwipe(event){ //свайп вправо
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+			$(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});		
 	        event.preventDefault();
 			let $active = $(".cotent-group.active");
 			let $elements = $(".cotent-group");
@@ -207,6 +231,12 @@ jQuery(function($) {
 				setTimeout(function(){
 			        $next.toggleClass('active');
 			        $next.css('transition-property', 'none');
+			        $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+			        $(".page-cases").swipe( {
+				        swipeLeft:leftSwipe,
+				        swipeRight:rightSwipe,
+				        threshold: 75
+				    });
 			    },500);
 			    return;
 			}
@@ -222,15 +252,21 @@ jQuery(function($) {
 			setTimeout(function(){
 		        $previous.toggleClass('active');
 		        $previous.css('transition-property', 'none');
+		        $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		        $(".page-cases").swipe( {
+				    swipeLeft:leftSwipe,
+				    swipeRight:rightSwipe,
+				    threshold: 75
+				});
 		    },500);
 
 		    $('.page-cases ul li.active').prev().toggleClass('active');
 		    $('.page-cases ul li.active:last').toggleClass('active');
 		}
 
-		$(".page-cases ul li").on("click", function(event) {
+		$(".page-cases ul li a").on("click", function(event) {
 			$('.page-cases ul li.active').toggleClass('active');
-		    $(this).toggleClass('active');
+		    $(this).parent().toggleClass('active');
 		});
 
 		$("#n1").on("click", function(event) {
@@ -306,6 +342,23 @@ jQuery(function($) {
     			$(".cotent-group:eq(2)").css('left', '-1000px');
     			$(".cotent-group:eq(3)").css('left', '-1000px');
   			});
+		});
+
+		$(".page-cases ul li a, .arrow-left, .arrow-right").on("click", function(event) {
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+		    $(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});			
+			setTimeout(function(){
+		        $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		        $(".page-cases").swipe( {
+			        swipeLeft:leftSwipe,
+			        swipeRight:rightSwipe,
+			        threshold: 75
+				});
+		    },500);
 		});
 	});
 });
