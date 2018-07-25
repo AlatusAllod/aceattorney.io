@@ -363,7 +363,7 @@ i {
 	flex-direction: column;
 	width: 100%;
 	transition-property: none;
-	transition-duration: 0.5s
+	transition-duration: 0.5s;
 }
 
 .list-content .cotent-group.active {
