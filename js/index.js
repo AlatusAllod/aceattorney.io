@@ -1,18 +1,10 @@
 jQuery(function($) {
 	$(document).ready( function() {
 		$('.navigation').stickUp(); //плавающее меню
+		$(".header-menu ul").hide(); 
 
 		$("a").on("click", function(event) { //отключил ссылки
 			event.preventDefault(); 
-		});
-
-		$("nav i").on("click", function() { //переключение меню по нажатию на гамбургер
-			let $nav = $("nav ul");
-		    if ($nav.css('display')=='none') {
-			  $nav.css('display', 'flex');
-			} else {
-			  $nav.css('display', 'none');
-			}
 		});
 
 		$("nav ul li").on("click", function() {  //закрытие меню при выборе раздела
@@ -359,6 +351,10 @@ jQuery(function($) {
 			        threshold: 75
 				});
 		    },500);
+		});
+
+		$(".header-menu i").on("click", function() {
+			$(".header-menu ul").slideToggle("slow");
 		});
 	});
 });
