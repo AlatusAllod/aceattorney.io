@@ -1,7 +1,9 @@
 jQuery(function($) {
 	$(document).ready( function() {
 		$('.navigation').stickUp(); //плавающее меню
+		$(".header-menu ul").css("display", "flex"); 
 		$(".header-menu ul").hide(); 
+
 
 		$("a").on("click", function(event) { //отключил ссылки
 			event.preventDefault(); 

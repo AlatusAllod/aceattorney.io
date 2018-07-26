@@ -118,7 +118,7 @@
 	}
 
 	.header-menu .wrapper nav ul {
-		display: flex;
+		display: none;
 		position: absolute;
 		top: 52px;
 		flex-direction: column;
