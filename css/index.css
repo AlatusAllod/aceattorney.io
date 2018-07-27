@@ -357,7 +357,7 @@ i {
 }
 
 .list-content .cotent-group {
-	left: 1000px;
+	left: 1500px;
 	display: flex;
 	position: absolute;
 	flex-direction: column;
@@ -367,7 +367,7 @@ i {
 }
 
 .list-content .cotent-group:last-of-type {
-	left: -1000px;
+	left: -1500px;
 }
 
 .list-content .cotent-group.active {

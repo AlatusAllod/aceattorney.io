@@ -45,14 +45,14 @@ jQuery(function($) {
 		    let $active = $(".cotent-group.active");
 		    let $elements = $(".cotent-group");
 
-		    $elements.css('left', '1000px');
+		    $elements.css('left', '1500px');
 		    $active.css('left', '0px');
 
 		    if ($active[0]  == $elements[4]) {
 		    	$('.page-cases ul li:last').toggleClass('active');
 		    	$('.page-cases ul li:first').toggleClass('active');    	
 
-				$active.css('transition-property', 'left').css('left', '-1000px');
+				$active.css('transition-property', 'left').css('left', '-1500px');
 		    	setTimeout(function(){
 		        	$active.toggleClass('active');
 		        	$active.css('transition-property', 'none');
@@ -67,7 +67,7 @@ jQuery(function($) {
 		    	return;
 		    }
 
-			$active.css('transition-property', 'left').css('left', '-1000px');
+			$active.css('transition-property', 'left').css('left', '-1500px');
 	    	setTimeout(function(){
 	        	$active.toggleClass('active');
 	        	$active.css('transition-property', 'none');
@@ -89,14 +89,14 @@ jQuery(function($) {
 			let $active = $(".cotent-group.active");
 			let $elements = $(".cotent-group");
 
-			$elements.css('left', '-1000px');
+			$elements.css('left', '-1500px');
 			$active.css('left', '0px');
 
 			if ($active[0] == $elements[0]) {
 			    $('.page-cases ul li:last').toggleClass('active');
 			    $('.page-cases ul li:first').toggleClass('active');
 
-				$active.css('transition-property', 'left').css('left', '1000px');
+				$active.css('transition-property', 'left').css('left', '1500px');
 			    setTimeout(function(){
 			        $active.toggleClass('active');
 			        $active.css('transition-property', 'none');
@@ -111,7 +111,7 @@ jQuery(function($) {
 			    return;
 			}
 
-			$active.css('transition-property', 'left').css('left', '1000px');
+			$active.css('transition-property', 'left').css('left', '1500px');
 		    setTimeout(function(){
 		        $active.toggleClass('active');
 		        $active.css('transition-property', 'none');
@@ -145,14 +145,14 @@ jQuery(function($) {
 		    let $active = $(".cotent-group.active");
 		    let $elements = $(".cotent-group");
 
-		    $elements.css('left', '1000px');
+		    $elements.css('left', '1500px');
 		    $active.css('left', '0px');
 
 		    if ($active[0]  == $elements[4]) {
 		    	$('.page-cases ul li:last').toggleClass('active');
 		    	$('.page-cases ul li:first').toggleClass('active');    	
 
-				$active.css('transition-property', 'left').css('left', '-1000px');
+				$active.css('transition-property', 'left').css('left', '-1500px');
 		    	setTimeout(function(){
 		        	$active.toggleClass('active');
 		        	$active.css('transition-property', 'none');
@@ -173,7 +173,7 @@ jQuery(function($) {
 		    	return;
 		    }
 
-			$active.css('transition-property', 'left').css('left', '-1000px');
+			$active.css('transition-property', 'left').css('left', '-1500px');
 	    	setTimeout(function(){
 	        	$active.toggleClass('active');
 	        	$active.css('transition-property', 'none');
@@ -207,14 +207,14 @@ jQuery(function($) {
 			let $active = $(".cotent-group.active");
 			let $elements = $(".cotent-group");
 
-			$elements.css('left', '-1000px');
+			$elements.css('left', '-1500px');
 			$active.css('left', '0px');
 
 			if ($active[0] == $elements[0]) {
 			    $('.page-cases ul li:last').toggleClass('active');
 			    $('.page-cases ul li:first').toggleClass('active');
 
-				$active.css('transition-property', 'left').css('left', '1000px');
+				$active.css('transition-property', 'left').css('left', '1500px');
 			    setTimeout(function(){
 			        $active.toggleClass('active');
 			        $active.css('transition-property', 'none');
@@ -235,7 +235,7 @@ jQuery(function($) {
 			    return;
 			}
 
-			$active.css('transition-property', 'left').css('left', '1000px');
+			$active.css('transition-property', 'left').css('left', '1500px');
 		    setTimeout(function(){
 		        $active.toggleClass('active');
 		        $active.css('transition-property', 'none');
@@ -269,12 +269,12 @@ jQuery(function($) {
 			if ($active[0] == $element[0]) return;
 
 			$active.fadeOut("slow", function() {
-    			$active.css('left', '-1000px').fadeIn(0).toggleClass('active');
+    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
     			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
-    			$(".cotent-group:eq(1)").css('left', '1000px');
-    			$(".cotent-group:eq(2)").css('left', '1000px');
-    			$(".cotent-group:eq(3)").css('left', '1000px');
-    			$(".cotent-group:eq(4)").css('left', '-1000px');
+    			$(".cotent-group:eq(1)").css('left', '1500px');
+    			$(".cotent-group:eq(2)").css('left', '1500px');
+    			$(".cotent-group:eq(3)").css('left', '1500px');
+    			$(".cotent-group:eq(4)").css('left', '-1500px');
   			});
 		});
 
@@ -284,12 +284,12 @@ jQuery(function($) {
 			if ($active[0] == $element[0]) return;
 
 			$active.fadeOut("slow", function() {
-    			$active.css('left', '-1000px').fadeIn(0).toggleClass('active');
+    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
     			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
-    			$(".cotent-group:eq(0)").css('left', '-1000px');
-    			$(".cotent-group:eq(2)").css('left', '1000px');
-    			$(".cotent-group:eq(3)").css('left', '1000px');
-    			$(".cotent-group:eq(4)").css('left', '1000px');
+    			$(".cotent-group:eq(0)").css('left', '-1500px');
+    			$(".cotent-group:eq(2)").css('left', '1500px');
+    			$(".cotent-group:eq(3)").css('left', '1500px');
+    			$(".cotent-group:eq(4)").css('left', '1500px');
   			});
 		});
 
@@ -299,12 +299,12 @@ jQuery(function($) {
 			if ($active[0] == $element[0]) return;
 
 			$active.fadeOut("slow", function() {
-    			$active.css('left', '-1000px').fadeIn(0).toggleClass('active');
+    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
     			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
-    			$(".cotent-group:eq(0)").css('left', '-1000px');
-    			$(".cotent-group:eq(1)").css('left', '-1000px');
-    			$(".cotent-group:eq(3)").css('left', '1000px');
-    			$(".cotent-group:eq(4)").css('left', '1000px');
+    			$(".cotent-group:eq(0)").css('left', '-1500px');
+    			$(".cotent-group:eq(1)").css('left', '-1500px');
+    			$(".cotent-group:eq(3)").css('left', '1500px');
+    			$(".cotent-group:eq(4)").css('left', '1500px');
   			});
 		});
 
@@ -314,12 +314,12 @@ jQuery(function($) {
 			if ($active[0] == $element[0]) return;
 
 			$active.fadeOut("slow", function() {
-    			$active.css('left', '-1000px').fadeIn(0).toggleClass('active');
+    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
     			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
-    			$(".cotent-group:eq(0)").css('left', '-1000px');
-    			$(".cotent-group:eq(1)").css('left', '-1000px');
-    			$(".cotent-group:eq(2)").css('left', '-1000px');
-    			$(".cotent-group:eq(4)").css('left', '1000px');
+    			$(".cotent-group:eq(0)").css('left', '-1500px');
+    			$(".cotent-group:eq(1)").css('left', '-1500px');
+    			$(".cotent-group:eq(2)").css('left', '-1500px');
+    			$(".cotent-group:eq(4)").css('left', '1500px');
   			});
 		});
 
@@ -329,12 +329,12 @@ jQuery(function($) {
 			if ($active[0] == $element[0]) return;
 
 			$active.fadeOut("slow", function() {
-    			$active.css('left', '-1000px').fadeIn(0).toggleClass('active');
+    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
     			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
-    			$(".cotent-group:eq(0)").css('left', '1000px');
-    			$(".cotent-group:eq(1)").css('left', '-1000px');
-    			$(".cotent-group:eq(2)").css('left', '-1000px');
-    			$(".cotent-group:eq(3)").css('left', '-1000px');
+    			$(".cotent-group:eq(0)").css('left', '1500px');
+    			$(".cotent-group:eq(1)").css('left', '-1500px');
+    			$(".cotent-group:eq(2)").css('left', '-1500px');
+    			$(".cotent-group:eq(3)").css('left', '-1500px');
   			});
 		});
 
@@ -353,10 +353,6 @@ jQuery(function($) {
 			        threshold: 75
 				});
 		    },500);
-		});
-
-		$(".header-menu i").on("click", function() {
-			$(".header-menu ul").slideToggle("slow");
 		});
 	});
 });
