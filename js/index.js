@@ -271,75 +271,140 @@ jQuery(function($) {
 			let $active = $(".cotent-group.active");
 			let $element = $(".cotent-group:eq(0)");
 			if ($active[0] == $element[0]) return;
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+			$(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});	
 
-			$active.fadeOut("slow", function() {
+			$active.fadeOut("fast", function() {
     			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
+    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
     			$(".cotent-group:eq(1)").css('left', '1500px');
     			$(".cotent-group:eq(2)").css('left', '1500px');
     			$(".cotent-group:eq(3)").css('left', '1500px');
     			$(".cotent-group:eq(4)").css('left', '-1500px');
   			});
+
+		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		    $(".page-cases").swipe( {
+				swipeLeft:leftSwipe,
+				swipeRight:rightSwipe,
+				threshold: 75
+			});
 		});
 
 		$("#n2").on("click", function(event) {
 			let $active = $(".cotent-group.active");
 			let $element = $(".cotent-group:eq(1)");
 			if ($active[0] == $element[0]) return;
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+			$(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});		
 
-			$active.fadeOut("slow", function() {
+			$active.fadeOut("fast", function() {
     			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
+    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
     			$(".cotent-group:eq(0)").css('left', '-1500px');
     			$(".cotent-group:eq(2)").css('left', '1500px');
     			$(".cotent-group:eq(3)").css('left', '1500px');
     			$(".cotent-group:eq(4)").css('left', '1500px');
   			});
+
+		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		    $(".page-cases").swipe( {
+				swipeLeft:leftSwipe,
+				swipeRight:rightSwipe,
+				threshold: 75
+			});
 		});
 
-		$("#n3").on("click", function(event) {
+		$("#n3").on("click", function(event) {	
 			let $active = $(".cotent-group.active");
 			let $element = $(".cotent-group:eq(2)");
 			if ($active[0] == $element[0]) return;
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+			$(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});		
 
-			$active.fadeOut("slow", function() {
+			$active.fadeOut("fast", function() {
     			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
+    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
     			$(".cotent-group:eq(0)").css('left', '-1500px');
     			$(".cotent-group:eq(1)").css('left', '-1500px');
     			$(".cotent-group:eq(3)").css('left', '1500px');
     			$(".cotent-group:eq(4)").css('left', '1500px');
   			});
+
+		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		    $(".page-cases").swipe( {
+				swipeLeft:leftSwipe,
+				swipeRight:rightSwipe,
+				threshold: 75
+			});
 		});
 
 		$("#n4").on("click", function(event) {
 			let $active = $(".cotent-group.active");
 			let $element = $(".cotent-group:eq(3)");
 			if ($active[0] == $element[0]) return;
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+			$(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});		
 
-			$active.fadeOut("slow", function() {
+			$active.fadeOut("fast", function() {
     			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
+    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
     			$(".cotent-group:eq(0)").css('left', '-1500px');
     			$(".cotent-group:eq(1)").css('left', '-1500px');
     			$(".cotent-group:eq(2)").css('left', '-1500px');
     			$(".cotent-group:eq(4)").css('left', '1500px');
   			});
+
+		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		    $(".page-cases").swipe( {
+				swipeLeft:leftSwipe,
+				swipeRight:rightSwipe,
+				threshold: 75
+			});
 		});
 
 		$("#n5").on("click", function(event) {
 			let $active = $(".cotent-group.active");
 			let $element = $(".cotent-group:eq(4)");
 			if ($active[0] == $element[0]) return;
+			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+			$(".page-cases").swipe( {
+			    swipeLeft: null,
+			    swipeRight: null,
+			    threshold: 75
+			});		
 
-			$active.fadeOut("slow", function() {
+			$active.fadeOut("fast", function() {
     			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("slow").toggleClass('active');
+    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
     			$(".cotent-group:eq(0)").css('left', '1500px');
     			$(".cotent-group:eq(1)").css('left', '-1500px');
     			$(".cotent-group:eq(2)").css('left', '-1500px');
     			$(".cotent-group:eq(3)").css('left', '-1500px');
   			});
+
+		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		    $(".page-cases").swipe( {
+				swipeLeft:leftSwipe,
+				swipeRight:rightSwipe,
+				threshold: 75
+			});
 		});
 
 		$(".page-cases ul li a, .arrow-left, .arrow-right").on("click", function(event) {
