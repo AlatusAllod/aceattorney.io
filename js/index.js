@@ -9,6 +9,10 @@ jQuery(function($) {
 			event.preventDefault(); 
 		});
 
+		$("nav i").on("click", function() { // гамбургер
+			$(".header-menu ul").slideToggle(); 
+		});
+
 		$("nav ul li").on("click", function() {  //закрытие меню при выборе раздела
 			$("nav ul").css('display', 'none');
 		});
