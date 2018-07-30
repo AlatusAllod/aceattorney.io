@@ -356,7 +356,7 @@ i {
 	width: 100%;
 }
 
-.list-content .cotent-group {
+.list-content .content-group {
 	left: 1500px;
 	display: flex;
 	position: absolute;
@@ -366,11 +366,11 @@ i {
 	transition-duration: 0.5s;
 }
 
-.list-content .cotent-group:last-of-type {
+.list-content .content-group:last-of-type {
 	left: -1500px;
 }
 
-.list-content .cotent-group.active {
+.list-content .content-group.active {
 	left: 0;
 }
 
