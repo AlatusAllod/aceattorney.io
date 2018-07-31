@@ -251,7 +251,7 @@
 		white-space: normal;
 	}
 
-	.page-contacts form fieldset {
+	.page-contacts form div {
 		flex-direction: column;
 		height: auto;
 	}

@@ -561,7 +561,7 @@ i {
 	margin-bottom: 55px;
 }
 
-.page-contacts form fieldset {
+.page-contacts form div {
 	display: flex;
 	justify-content: space-between;
 	height: 50px;
@@ -570,6 +570,7 @@ i {
 
 .page-contacts form input {
 	width: 30%;
+	height: 50px;
 	background-color: transparent;
 	border: 1px solid white;
 	color: white;
