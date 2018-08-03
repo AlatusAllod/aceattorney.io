@@ -189,8 +189,13 @@
 		font-size: 16px;
 	}
 
+	.page-main {
+		justify-content: flex-start;
+	}
+
 	.page-main h1 {
 		font-size: 36px;
+		margin-top: 200px;
 		margin-bottom: 10px;
 	}
 
@@ -260,6 +265,10 @@
 		justify-content: center;
 		height: 50px;
 		width: 100%
+	}
+
+	.page-footer .callback {
+		margin-bottom: 10px;
 	}
 
 	#modal_form {
