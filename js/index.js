@@ -2,6 +2,7 @@ jQuery(function($) {
 	$(document).ready( function() {
 		$(".header-menu ul").css("display", "flex"); 
 		$(".header-menu ul").hide();
+		$(".content-component").eq(0).toggleClass('active');
 
 		$("a").on("click", function(event) { //отключил ссылки
 			event.preventDefault(); 
