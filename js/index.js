@@ -1,6 +1,5 @@
 jQuery(function($) {
 	$(document).ready( function() {
-		$('.navigation').stickUp(); //плавающее меню
 		$(".header-menu ul").css("display", "flex"); 
 		$(".header-menu ul").hide();
 
@@ -8,22 +7,21 @@ jQuery(function($) {
 			event.preventDefault(); 
 		});
 
-		$("nav i").on("click", function() { // гамбургер
+		$(".header-menu i").on("click", function() { // гамбургер
 			$(".header-menu ul").slideToggle(); 
 		});
 
-		$("nav ul li").on("click", function() {  //закрытие меню при выборе раздела
-			$("nav ul").css('display', 'none');
+		$(".header-menu ul li").on("click", function() {  //закрытие меню при выборе раздела
+			$(".header-menu ul").css('display', 'none');
 		});
 
-		$("nav, .header-top").on("click","a", function (event) { //плавная якорная прокрутка
-		    event.preventDefault();
+		$(".header-top, .header-menu, .page-footer").on("click","a", function (event) { //плавная якорная прокрутка
 		    let id  = $(this).attr('href'),
 		    top = $(id).offset().top;
 		    $('body,html').animate({scrollTop: top}, 1000);
 		});
 
-		$('a.callback, .page-header button').click( function(event){ //модальное окно
+		$('a.callback, .page-main button').click( function(event){ //модальное окно
 			event.preventDefault();
 			$('#overlay').fadeIn(400,
 			 	function(){ 
@@ -43,15 +41,27 @@ jQuery(function($) {
 				);
 		});
 
-		$(".cases-list .arrow-right").bind("click", function(event) { //карусель, стрелка вправо
-			event.preventDefault();
-		    let $active = $(".content-group.active");
-		    let $elements = $(".content-group");
+		$(".cases-carousel .arrow-right").bind("click", function(event) { //карусель, стрелка вправо
+		    let $active = $(".content-component.active");
+		    let $elements = $(".content-component");
 
 		    $elements.css('left', '1500px');
 		    $active.css('left', '0px');
 
-		    if ($active[0]  == $elements[4]) {
+		    if ($elements.length == 2) {
+		    	let $inactive = $(".content-component:not(.active)");
+		    	$inactive.css('left', '0').fadeOut(0);
+				$active.fadeToggle('slow');
+				$inactive.fadeToggle('slow');
+		    	setTimeout(function(){
+		        	$active.toggleClass('active');
+		        	$inactive.toggleClass('active');
+		    	},500);
+		    	$('.page-cases ul li').toggleClass('active');
+		    	return;
+		    }
+
+		    if ($active[0]  == $elements[$elements.length - 1]) {
 		    	$('.page-cases ul li:last').toggleClass('active');
 		    	$('.page-cases ul li:first').toggleClass('active');    	
 
@@ -61,7 +71,7 @@ jQuery(function($) {
 		        	$active.css('transition-property', 'none');
 		    	},500);
 
-		    	var $next = $(".content-group:first");
+		    	let $next = $(".content-component:first");
 				$next.css('transition-property', 'left').css('left', '0px');
 				setTimeout(function(){
 		        	$next.toggleClass('active');
@@ -76,7 +86,7 @@ jQuery(function($) {
 	        	$active.css('transition-property', 'none');
 	    	},500);
 
-			var $next = $(".active + .content-group");
+			let $next = $(".active + .content-component");
 			$next.css('transition-property', 'left').css('left', '0px');
 			setTimeout(function(){
 	        	$next.toggleClass('active');
@@ -87,13 +97,25 @@ jQuery(function($) {
 	    	$('.page-cases ul li.active:first').toggleClass('active');
 		});
 
-		$(".cases-list .arrow-left").on("click", function(event) { //карусель, стрелка влево
-		    event.preventDefault();
-			let $active = $(".content-group.active");
-			let $elements = $(".content-group");
+		$(".cases-carousel .arrow-left").on("click", function(event) { //карусель, стрелка влево
+			let $active = $(".content-component.active");
+			let $elements = $(".content-component");
 
 			$elements.css('left', '-1500px');
 			$active.css('left', '0px');
+
+			if ($elements.length == 2) {
+		    	let $inactive = $(".content-component:not(.active)");
+		    	$inactive.css('left', '0').fadeOut(0);
+				$active.fadeToggle('slow');
+				$inactive.fadeToggle('slow');
+		    	setTimeout(function(){
+		        	$active.toggleClass('active');
+		        	$inactive.toggleClass('active');
+		    	},500);
+		    	$('.page-cases ul li').toggleClass('active');
+		    	return;
+		    }
 
 			if ($active[0] == $elements[0]) {
 			    $('.page-cases ul li:last').toggleClass('active');
@@ -105,7 +127,7 @@ jQuery(function($) {
 			        $active.css('transition-property', 'none');
 			    },500);
 
-			    var $next = $(".content-group:last");
+			    let $next = $(".content-component:last");
 				$next.css('transition-property', 'left').css('left', '0px');
 				setTimeout(function(){
 			        $next.toggleClass('active');
@@ -120,7 +142,7 @@ jQuery(function($) {
 		        $active.css('transition-property', 'none');
 		    },500);
 
-			var $previous = $(".content-group.active").prev();
+			let $previous = $(".content-component.active").prev();
 			$previous.css('transition-property', 'left').css('left', '0px');
 			setTimeout(function(){
 		        $previous.toggleClass('active');
@@ -143,15 +165,35 @@ jQuery(function($) {
 			    swipeLeft: null,
 			    swipeRight: null,
 			    threshold: 75
-			});			
-	        event.preventDefault();
-		    let $active = $(".content-group.active");
-		    let $elements = $(".content-group");
+			});	
+		    let $active = $(".content-component.active");
+		    let $elements = $(".content-component");
+
+		    if ($elements.length == 2) {
+		    	let $inactive = $(".content-component:not(.active)");
+		    	$inactive.css('left', '0').fadeOut(0);
+				$active.fadeToggle('slow');
+				$inactive.fadeToggle('slow');
+		    	setTimeout(function(){
+		        	$active.toggleClass('active');
+		        	$inactive.toggleClass('active');
+		    	},500);
+		    	$('.page-cases ul li').toggleClass('active');
+		    	setTimeout(function(){
+		        	$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		        	$(".page-cases").swipe( {
+				        swipeLeft:leftSwipe,
+				        swipeRight:rightSwipe,
+				        threshold: 75
+				    });
+		    	},500);
+		    	return;
+		    }
 
 		    $elements.css('left', '1500px');
 		    $active.css('left', '0px');
 
-		    if ($active[0]  == $elements[4]) {
+		    if ($active[0]  == $elements[$elements.length - 1]) {
 		    	$('.page-cases ul li:last').toggleClass('active');
 		    	$('.page-cases ul li:first').toggleClass('active');    	
 
@@ -161,7 +203,7 @@ jQuery(function($) {
 		        	$active.css('transition-property', 'none');
 		    	},500);
 
-		    	var $next = $(".content-group:first");
+		    	let $next = $(".content-component:first");
 				$next.css('transition-property', 'left').css('left', '0px');
 				setTimeout(function(){
 		        	$next.toggleClass('active');
@@ -182,7 +224,7 @@ jQuery(function($) {
 	        	$active.css('transition-property', 'none');
 	    	},500);
 
-			var $next = $(".active + .content-group");
+			let $next = $(".active + .content-component");
 			$next.css('transition-property', 'left').css('left', '0px');
 			setTimeout(function(){
 	        	$next.toggleClass('active');
@@ -205,13 +247,33 @@ jQuery(function($) {
 			    swipeLeft: null,
 			    swipeRight: null,
 			    threshold: 75
-			});		
-	        event.preventDefault();
-			let $active = $(".content-group.active");
-			let $elements = $(".content-group");
+			});	
+			let $active = $(".content-component.active");
+			let $elements = $(".content-component");
 
 			$elements.css('left', '-1500px');
 			$active.css('left', '0px');
+
+		    if ($elements.length == 2) {
+		    	let $inactive = $(".content-component:not(.active)");
+		    	$inactive.css('left', '0').fadeOut(0);
+				$active.fadeToggle('slow');
+				$inactive.fadeToggle('slow');
+		    	setTimeout(function(){
+		        	$active.toggleClass('active');
+		        	$inactive.toggleClass('active');
+		    	},500);
+		    	$('.page-cases ul li').toggleClass('active');
+		    	setTimeout(function(){
+		        	$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+		        	$(".page-cases").swipe( {
+				        swipeLeft:leftSwipe,
+				        swipeRight:rightSwipe,
+				        threshold: 75
+				    });
+		    	},500);
+		    	return;
+		    }
 
 			if ($active[0] == $elements[0]) {
 			    $('.page-cases ul li:last').toggleClass('active');
@@ -223,7 +285,7 @@ jQuery(function($) {
 			        $active.css('transition-property', 'none');
 			    },500);
 
-			    var $next = $(".content-group:last");
+			    let $next = $(".content-component:last");
 				$next.css('transition-property', 'left').css('left', '0px');
 				setTimeout(function(){
 			        $next.toggleClass('active');
@@ -244,7 +306,7 @@ jQuery(function($) {
 		        $active.css('transition-property', 'none');
 		    },500);
 
-			var $previous = $(".content-group.active").prev();
+			let $previous = $(".content-component.active").prev();
 			$previous.css('transition-property', 'left').css('left', '0px');
 			setTimeout(function(){
 		        $previous.toggleClass('active');
@@ -261,144 +323,46 @@ jQuery(function($) {
 		    $('.page-cases ul li.active:last').toggleClass('active');
 		}
 
-		$(".page-cases ul li a").on("click", function(event) {
+		let $crumbs = $('.page-cases .cases-content').children().length;
+		for (let i = 0; i < $crumbs; i++) {
+			$('.page-cases ul').append('<li><a></a></li>')
+		}
+		$('.page-cases ul li:first').toggleClass('active');
+
+		$(".page-cases ul li a").on("click", function(event) { //переключение крошек
+
+			let $activeN = $(".page-cases ul li").index($("li.active"));
+			let $elementN = $(".page-cases ul li a").index($(this));
+			if ($activeN == $elementN) return;
+
 			$('.page-cases ul li.active').toggleClass('active');
 		    $(this).parent().toggleClass('active');
-		});
 
-		$("#n1").on("click", function(event) {
-			let $active = $(".content-group.active");
-			let $element = $(".content-group:eq(0)");
-			if ($active[0] == $element[0]) return;
-			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
+		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
 			$(".page-cases").swipe( {
 			    swipeLeft: null,
 			    swipeRight: null,
 			    threshold: 75
-			});	
-
-			$active.fadeOut("fast", function() {
-    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
-    			$(".content-group:eq(1)").css('left', '1500px');
-    			$(".content-group:eq(2)").css('left', '1500px');
-    			$(".content-group:eq(3)").css('left', '1500px');
-    			$(".content-group:eq(4)").css('left', '-1500px');
-  			});
-
-		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
-		    $(".page-cases").swipe( {
-				swipeLeft:leftSwipe,
-				swipeRight:rightSwipe,
-				threshold: 75
 			});
-		});
 
-		$("#n2").on("click", function(event) {
-			let $active = $(".content-group.active");
-			let $element = $(".content-group:eq(1)");
-			if ($active[0] == $element[0]) return;
-			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
-			$(".page-cases").swipe( {
-			    swipeLeft: null,
-			    swipeRight: null,
-			    threshold: 75
-			});		
+			let $active = $(".content-component.active");
+			let $element = $(".content-component").eq($elementN);
 
 			$active.fadeOut("fast", function() {
-    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
+				
+				$(".content-component").css('left', '-1500px');
+				$(".content-component").eq($elementN + 1).css('left', '1500px');
+
+				if ($elementN == ($(".page-cases ul li").length - 1)) {
+					$(".content-component:first").css('left', '1500px');
+				}
+
+
+				$active.fadeIn(0).toggleClass('active');
     			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
-    			$(".content-group:eq(0)").css('left', '-1500px');
-    			$(".content-group:eq(2)").css('left', '1500px');
-    			$(".content-group:eq(3)").css('left', '1500px');
-    			$(".content-group:eq(4)").css('left', '1500px');
   			});
 
-		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
-		    $(".page-cases").swipe( {
-				swipeLeft:leftSwipe,
-				swipeRight:rightSwipe,
-				threshold: 75
-			});
-		});
-
-		$("#n3").on("click", function(event) {	
-			let $active = $(".content-group.active");
-			let $element = $(".content-group:eq(2)");
-			if ($active[0] == $element[0]) return;
-			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
-			$(".page-cases").swipe( {
-			    swipeLeft: null,
-			    swipeRight: null,
-			    threshold: 75
-			});		
-
-			$active.fadeOut("fast", function() {
-    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
-    			$(".content-group:eq(0)").css('left', '-1500px');
-    			$(".content-group:eq(1)").css('left', '-1500px');
-    			$(".content-group:eq(3)").css('left', '1500px');
-    			$(".content-group:eq(4)").css('left', '1500px');
-  			});
-
-		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
-		    $(".page-cases").swipe( {
-				swipeLeft:leftSwipe,
-				swipeRight:rightSwipe,
-				threshold: 75
-			});
-		});
-
-		$("#n4").on("click", function(event) {
-			let $active = $(".content-group.active");
-			let $element = $(".content-group:eq(3)");
-			if ($active[0] == $element[0]) return;
-			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
-			$(".page-cases").swipe( {
-			    swipeLeft: null,
-			    swipeRight: null,
-			    threshold: 75
-			});		
-
-			$active.fadeOut("fast", function() {
-    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
-    			$(".content-group:eq(0)").css('left', '-1500px');
-    			$(".content-group:eq(1)").css('left', '-1500px');
-    			$(".content-group:eq(2)").css('left', '-1500px');
-    			$(".content-group:eq(4)").css('left', '1500px');
-  			});
-
-		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
-		    $(".page-cases").swipe( {
-				swipeLeft:leftSwipe,
-				swipeRight:rightSwipe,
-				threshold: 75
-			});
-		});
-
-		$("#n5").on("click", function(event) {
-			let $active = $(".content-group.active");
-			let $element = $(".content-group:eq(4)");
-			if ($active[0] == $element[0]) return;
-			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "none");
-			$(".page-cases").swipe( {
-			    swipeLeft: null,
-			    swipeRight: null,
-			    threshold: 75
-			});		
-
-			$active.fadeOut("fast", function() {
-    			$active.css('left', '-1500px').fadeIn(0).toggleClass('active');
-    			$element.fadeOut(0).css('left', '0px').fadeIn("fast").toggleClass('active');
-    			$(".content-group:eq(0)").css('left', '1500px');
-    			$(".content-group:eq(1)").css('left', '-1500px');
-    			$(".content-group:eq(2)").css('left', '-1500px');
-    			$(".content-group:eq(3)").css('left', '-1500px');
-  			});
-
-		    $(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
+  			$(".page-cases ul li a, .arrow-left, .arrow-right").css("pointer-events", "auto");
 		    $(".page-cases").swipe( {
 				swipeLeft:leftSwipe,
 				swipeRight:rightSwipe,
